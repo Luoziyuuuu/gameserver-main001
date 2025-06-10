@@ -331,7 +331,7 @@ isConditionTrue_0 = false;
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.network.sendAsyncRequest("/postscore", "ToJSON(GameData)", "POST", "application/json", runtimeScene.getScene().getVariables().get("rank"), runtimeScene.getScene().getVariables().get("ErrorResponse"));
+{gdjs.evtTools.network.sendAsyncRequest("/postscore", gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getGame().getVariables().getFromIndex(3)), "POST", "application/json", runtimeScene.getScene().getVariables().get("rank"), runtimeScene.getScene().getVariables().get("ErrorResponse"));
 }
 { //Subevents
 gdjs.GameOverSceneCode.eventsList1(runtimeScene);} //End of subevents
