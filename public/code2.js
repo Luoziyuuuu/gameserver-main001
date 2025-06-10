@@ -76,7 +76,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "delay") >= 1;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10201380);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9486620);
 }
 }
 if (isConditionTrue_0) {
@@ -307,7 +307,12 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "a");
 if (isConditionTrue_0) {
-{gdjs.evtTools.network.sendAsyncRequest("/postscore", "ToString(scScore.Score)", "POST", "application/json", runtimeScene.getScene().getVariables().get("	ServerResponse"), runtimeScene.getScene().getVariables().get("ErrorResponse"));
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12971452);
+}
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.network.sendAsyncRequest("/postscore", "{\"score\":" + gdjs.evtTools.common.toString(runtimeScene.getGame().getVariables().getFromIndex(3).getChild("Score").getAsNumber()) + "}", "POST", "application/json", runtimeScene.getScene().getVariables().get("	ServerResponse"), runtimeScene.getScene().getVariables().get("ErrorResponse"));
 }}
 
 }
