@@ -24,6 +24,8 @@ gdjs.GameOverSceneCode.GD_9595002Objects1= [];
 gdjs.GameOverSceneCode.GD_9595002Objects2= [];
 gdjs.GameOverSceneCode.GDleaveObjects1= [];
 gdjs.GameOverSceneCode.GDleaveObjects2= [];
+gdjs.GameOverSceneCode.GDrankObjects1= [];
+gdjs.GameOverSceneCode.GDrankObjects2= [];
 
 
 gdjs.GameOverSceneCode.eventsList0 = function(runtimeScene) {
@@ -39,6 +41,23 @@ let isConditionTrue_0 = false;
 
 
 };gdjs.GameOverSceneCode.eventsList1 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+gdjs.copyArray(runtimeScene.getObjects("rank"), gdjs.GameOverSceneCode.GDrankObjects1);
+{gdjs.evtTools.network.jsonToVariableStructure("rank", runtimeScene.getGame().getVariables().getFromIndex(4));
+}{for(var i = 0, len = gdjs.GameOverSceneCode.GDrankObjects1.length ;i < len;++i) {
+    gdjs.GameOverSceneCode.GDrankObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0).getChild("name").getAsString() + ":" + gdjs.evtTools.common.toString(runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0).getChild("score").getAsNumber()));
+}
+}}
+
+}
+
+
+};gdjs.GameOverSceneCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -308,12 +327,35 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "a");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12971452);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12093988);
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.network.sendAsyncRequest("/postscore", "{\"score\":" + gdjs.evtTools.common.toString(runtimeScene.getGame().getVariables().getFromIndex(3).getChild("Score").getAsNumber()) + "}", "POST", "application/json", runtimeScene.getScene().getVariables().get("	ServerResponse"), runtimeScene.getScene().getVariables().get("ErrorResponse"));
-}}
+{gdjs.evtTools.network.sendAsyncRequest("/postscore", "ToJSON(GameData)", "POST", "application/json", runtimeScene.getScene().getVariables().get("rank"), runtimeScene.getScene().getVariables().get("ErrorResponse"));
+}
+{ //Subevents
+gdjs.GameOverSceneCode.eventsList1(runtimeScene);} //End of subevents
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+}
 
 }
 
@@ -343,8 +385,10 @@ gdjs.GameOverSceneCode.GD_9595002Objects1.length = 0;
 gdjs.GameOverSceneCode.GD_9595002Objects2.length = 0;
 gdjs.GameOverSceneCode.GDleaveObjects1.length = 0;
 gdjs.GameOverSceneCode.GDleaveObjects2.length = 0;
+gdjs.GameOverSceneCode.GDrankObjects1.length = 0;
+gdjs.GameOverSceneCode.GDrankObjects2.length = 0;
 
-gdjs.GameOverSceneCode.eventsList1(runtimeScene);
+gdjs.GameOverSceneCode.eventsList2(runtimeScene);
 gdjs.GameOverSceneCode.GD_959500Objects1.length = 0;
 gdjs.GameOverSceneCode.GD_959500Objects2.length = 0;
 gdjs.GameOverSceneCode.GDNewSpriteObjects1.length = 0;
@@ -365,6 +409,8 @@ gdjs.GameOverSceneCode.GD_9595002Objects1.length = 0;
 gdjs.GameOverSceneCode.GD_9595002Objects2.length = 0;
 gdjs.GameOverSceneCode.GDleaveObjects1.length = 0;
 gdjs.GameOverSceneCode.GDleaveObjects2.length = 0;
+gdjs.GameOverSceneCode.GDrankObjects1.length = 0;
+gdjs.GameOverSceneCode.GDrankObjects2.length = 0;
 
 
 return;
