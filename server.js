@@ -49,7 +49,7 @@ server.post("/postscore", (req, res) => {
    // res.send([{name:"MD", rank:1},{name:"Jhon",rank:2}]);
 });
 
-server.listen(3000)
+server.listen(80)
 /*server.listen(3000, () => {
    console.log("✅ Server running at http://localhost:3000");
  });*/

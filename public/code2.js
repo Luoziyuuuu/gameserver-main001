@@ -50,7 +50,7 @@ let isConditionTrue_0 = false;
 gdjs.copyArray(runtimeScene.getObjects("rank"), gdjs.GameOverSceneCode.GDrankObjects1);
 {gdjs.evtTools.network.jsonToVariableStructure("rank", runtimeScene.getGame().getVariables().getFromIndex(4));
 }{for(var i = 0, len = gdjs.GameOverSceneCode.GDrankObjects1.length ;i < len;++i) {
-    gdjs.GameOverSceneCode.GDrankObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0).getChild("name").getAsString() + ":" + gdjs.evtTools.common.toString(runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0).getChild("score").getAsNumber()));
+    gdjs.GameOverSceneCode.GDrankObjects1[i].getBehavior("Text").setText("most high:" + gdjs.evtTools.common.toString(runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0).getChild("score").getAsNumber()));
 }
 }}
 
@@ -95,7 +95,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "delay") >= 1;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9486620);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13756060);
 }
 }
 if (isConditionTrue_0) {
@@ -327,7 +327,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "a");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12093988);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13773916);
 }
 }
 if (isConditionTrue_0) {
