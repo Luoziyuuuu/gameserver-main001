@@ -95,7 +95,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "delay") >= 1;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13756060);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12653804);
 }
 }
 if (isConditionTrue_0) {
@@ -327,11 +327,11 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "a");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13773916);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13026484);
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.network.sendAsyncRequest("/postscore", gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getGame().getVariables().getFromIndex(3)), "POST", "application/json", runtimeScene.getScene().getVariables().get("rank"), runtimeScene.getScene().getVariables().get("ErrorResponse"));
+{gdjs.evtTools.network.sendAsyncRequest("/postscore", gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getGame().getVariables().getFromIndex(3)), "POST", "application/json", runtimeScene.getScene().getVariables().getFromIndex(0), runtimeScene.getScene().getVariables().get("ErrorResponse"));
 }
 { //Subevents
 gdjs.GameOverSceneCode.eventsList1(runtimeScene);} //End of subevents

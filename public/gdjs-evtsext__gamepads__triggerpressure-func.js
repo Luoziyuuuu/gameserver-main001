@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__Gamepads__TriggerPressure !== "undefined") {
 gdjs.evtsExt__Gamepads__TriggerPressure = {};
 
 
-gdjs.evtsExt__Gamepads__TriggerPressure.userFunc0xb5f570 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Gamepads__TriggerPressure.userFunc0xbbaa70 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 /** @type {Gamepad[]} */
 const gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
@@ -52,7 +52,7 @@ gdjs.evtsExt__Gamepads__TriggerPressure.eventsList0 = function(runtimeScene, eve
 {
 
 
-gdjs.evtsExt__Gamepads__TriggerPressure.userFunc0xb5f570(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__Gamepads__TriggerPressure.userFunc0xbbaa70(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
