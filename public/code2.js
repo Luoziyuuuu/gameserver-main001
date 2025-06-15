@@ -48,7 +48,7 @@ let isConditionTrue_0 = false;
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("rank"), gdjs.GameOverSceneCode.GDrankObjects1);
-{gdjs.evtTools.network.jsonToVariableStructure("rank", runtimeScene.getGame().getVariables().getFromIndex(4));
+{gdjs.evtTools.network.jsonToVariableStructure("rank", runtimeScene.getScene().getVariables().getFromIndex(0));
 }{for(var i = 0, len = gdjs.GameOverSceneCode.GDrankObjects1.length ;i < len;++i) {
     gdjs.GameOverSceneCode.GDrankObjects1[i].getBehavior("Text").setText("most high:" + gdjs.evtTools.common.toString(runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0).getChild("score").getAsNumber()));
 }
