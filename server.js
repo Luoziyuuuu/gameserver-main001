@@ -28,18 +28,18 @@ server.get("/score", function (req, res) { //other pages
 
 
 server.post("/rank", (req, res) => {
-   GameDB.find({}, { _id: 0 }).sort({ "score": -1 }).limit(3).then((docs) => {
+   GameDB.find({}, { _id: 0 }).sort({ "Score": -1 }).limit(3).then((docs) => {
       if (docs != null) {
          res.send(docs);
       }
    })
 })
 server.post("/postscore", (req, res) => {
-   console.log(req.body);
+   console.log(req.body)
    //save to db
    GameDB.insert(req.body).then(doc => {
       //find and sort and limit
-      GameDB.find({}, { _id: 0 }).sort({ "score": -1 }).limit(3).then((docs) => {
+      GameDB.find({}, { _id: 0 }).sort({ "Score": -1 }).limit(3).then((docs) => {
          if (docs != null) {
             res.send(docs);
          }
